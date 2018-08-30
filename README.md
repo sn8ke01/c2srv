@@ -11,7 +11,7 @@ The 'server' will also decode the encoded results.
 
 ## c2cli.py
 A simple 'client' side app that will make an http connection, through a proxy, out to the the 'server' side app. 
-After the connection has been established it will recive commands encoded in the data section of the http packet, that will be decoded and executed .  The results of the command(s) will be encoded and sent back to the 'sever' side.
+After the connection has been established it will receive commands encoded in the data section of the http packet, that will be decoded and executed .  The results of the command(s) will be encoded and sent back to the 'sever' side.
 
     
 ````bash
