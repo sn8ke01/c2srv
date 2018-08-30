@@ -20,10 +20,10 @@ After the connection has been established it will receive commands encoded in th
 +-----------------+   HTTP Connection Established  +-----------------+
 |                 +-------------------------------->                 |
 | +-------------+ |      Encoded CMDs              | +--------+      |
-| |Decode CMD   <------------------------------------|cmd.html|      |
-| |Execute CMD  | |      Encoded CMD Output        | +--------+      |
-| |Encode Output+---------------------------------->                 |
-| +-------------+ |                                |                 |
+| |Decode CMD   <-|--------------------------------|-|cmd.html|      |
+| |Execute CMD  | |      Encoded CMD Output        | +--------+--+   |
+| |Encode Output+-|--------------------------------> |Results.txt|   |
+| +-------------+ |                                | +-----------+   |
 +-----------------+                                +-----------------+
 ````
     
