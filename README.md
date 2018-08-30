@@ -1,6 +1,6 @@
 # c2srv
 
-This will be an attempt at building a limited function C2 channel.
+This will be an attempt at building a limited function C2 channel.  This is more a learning experiance for me than an attempt to build something truly useful.
 
 ### Components
 A server side app (<b>c2http.py</b>) that will feed commands to and receive results from a client side app (<b>c2cli.py</b>)
