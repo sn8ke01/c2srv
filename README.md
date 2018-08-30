@@ -17,11 +17,11 @@ After the connection has been established it will receive commands encoded in th
 ````bash
   Client:                                           Server:
   c2cli.py                                          c2http.py
-+-----------------+   HTTP Connection Established   -----------------+
++-----------------+   HTTP Connection Established  +-----------------+
 |                 +-------------------------------->                 |
-| +-------------+ |      Encoded CMDs              |                 |
-| |Decode CMD   <----------------------------------+                 |
-| |Execute CMD  | |      Encoded CMD Output        |                 |
+| +-------------+ |      Encoded CMDs              | +--------+      |
+| |Decode CMD   <------------------------------------|cmd.html|      |
+| |Execute CMD  | |      Encoded CMD Output        | +--------+      |
 | |Encode Output+---------------------------------->                 |
 | +-------------+ |                                |                 |
 +-----------------+                                +-----------------+
