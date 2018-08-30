@@ -1,7 +1,7 @@
 import base64
 from subprocess import check_output as cmd_ouput
 # import request
-# Use 'del <module>' to unload a module.  Reduce mem usage?
+# Use 'del <module>' to unload a module
 
 
 # todo: setup proxy
@@ -14,14 +14,11 @@ def header():
 	print("----------")
 
 
-def tmp_get_cmd():
-    # todo: remove this when c2http.py is working
-    return input("[+] Type CMD > ")
-
 
 def get_cmd_from_c2http():
     # Connect to c2http server and pull/rcv commands
-    pass
+    # todo: remove this when c2http.py is working
+    return input("[+] Type CMD > ")
 
 
 def execute_cmd(cmd):
@@ -48,10 +45,8 @@ def decode_cmd(encoded_cmd):
 def main():
 	header()
 	
-	# Get and encode cmd locally. 
-	# This section will be updated to get cmd from c2http
-	#    and decode cmd for execution.
-	clear_cmd = tmp_get_cmd()
+	# Get encoded cmd from c2http.py . 
+	clear_cmd = get_cmd_from_c2http() #currently local
 	encoded_cmd = encode_cmd(clear_cmd)
 	print('[+] Encoded CMD is "{}"'.format(encoded_cmd))
 	
@@ -59,7 +54,7 @@ def main():
 	decoded_cmd = decode_cmd(encoded_cmd)
 	print('[+] Decoded CMD is "{}"'.format(decoded_cmd))
 	
-	# Execute and Return Results
+	# Execute and return results
 	cmdout = execute_cmd(decoded_cmd.decode())
 	print("--not binary---" + decoded_cmd.decode())
 	print(cmdout.decode())
