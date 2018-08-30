@@ -19,7 +19,7 @@ After the connection has been established it will receive commands encoded in th
   c2cli.py                                          c2srv.py
 +-----------------+   HTTP Connection Established   -----------------+
 |                 +-------------------------------->                 |
-| +-------------+ |      Encoded CMDs              |                 |root  toorroot    toor
+| +-------------+ |      Encoded CMDs              |                 |
 | |Decode CMD   <----------------------------------+                 |
 | |Execute CMD  | |      Encoded CMD Output        |                 |
 | |Encode Output+---------------------------------->                 |
