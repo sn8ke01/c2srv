@@ -1,5 +1,7 @@
 from subprocess import check_output as cmd_ouput
 
+# todo: setup proxy
+# todo: connect to c2http over http protocol
 
 def tmp_get_cmd():
     # todo: remove this when c2http.py is working

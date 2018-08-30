@@ -1,3 +1,6 @@
+# todo: listen for http packet requesting commands
+# todo: send commnds in an http packet
+
 def header():
     print('------------------')
     print(' c2http server')
