@@ -16,7 +16,7 @@ After the connection has been established it will receive commands encoded in th
     
 ````bash
   Client:                                           Server:
-  c2cli.py                                          c2srv.py
+  c2cli.py                                          c2http.py
 +-----------------+   HTTP Connection Established   -----------------+
 |                 +-------------------------------->                 |
 | +-------------+ |      Encoded CMDs              |                 |
