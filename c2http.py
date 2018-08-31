@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-# todo: listen for http packet requesting commands
-# todo: send commnds in an http packet
+# todo: exit gracefully
+
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
-class server(BaseHTTPRequestHandlerx):
+class server(BaseHTTPRequestHandler):
 	
 	def do_GET(self):
 		if self.path == '/':
@@ -16,16 +16,19 @@ class server(BaseHTTPRequestHandlerx):
 		except:
 			file_to_open = "404 Error"
 			self.send_response(404)
-
+		
 		self.end_headers()
 		self.wfile.write(bytes(file_to_open, 'utf-8'))
+		
+	def do_POST(self):
+		self._set_headers()
+		self.wfile.write("<html><body><h1>POST!</h1></body></html>")
 
 
 def header():
     print('------------------')
     print(' c2http server')
     print('------------------')
-    print('0')
 
 
 def http_listener_service():
@@ -53,19 +56,23 @@ def display_cmd_ouput():
 
 
 def main():
-    
-    '''header()'''
-    print('1')
-    httpd = HTTPServer(('localhost', 8080), server)
-    print('2')
-    httpd.serve_forever()
-    print("Server running....")
-'''
+	port = 8080
+	ip = 'localhost'
+	header()
+	
+	# Server
+	httpd = HTTPServer((ip, port), server)
+	print("Server running @ {} on port {}".format(ip, port))
+	httpd.serve_forever()
+	
+	'''
     #http_listener_service()
     get_cmd()
     send_cmd()
     encode_cmd()
     decode_results()
     display_cmd_ouput()
-'''
-main()
+	'''
+
+if __name__ == "__main__":
+		main()
