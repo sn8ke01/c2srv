@@ -20,11 +20,13 @@ class server(BaseHTTPRequestHandler):
 
         self.end_headers()
         self.wfile.write(bytes(file_to_open, 'utf-8'))
-        '''
-        #Use this to receive data back OR have a seperate for capturing CMD output sent from the client  
-        '''
+
+
 
     def do_POST(self):
+
+        #Use this to receive data back OR have a seperate for capturing CMD output sent from the client
+
         self._set_headers()
         self.wfile.write("<html><body><h1>POST!</h1></body></html>")
 
